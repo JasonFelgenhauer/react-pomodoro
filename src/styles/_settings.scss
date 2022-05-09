@@ -1,0 +1,46 @@
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
+
+// Variable
+
+$color_1: #0f0e0e;
+$color_2: #e5e7fa;
+$color_3: #be52f2;
+$color_4: #0084f4;
+
+$font: 'Fira Code', sans-serif;
+
+// Reset
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	font-family: $font;
+	background: $color_1;
+	color: $color_2;
+}
+a {
+	color: $color_2;
+	text-decoration: none;
+	&:visited {
+		color: $color_2;
+	}
+}
+li {
+	list-style-type: none;
+}
+
+// General
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 2000px;
+	margin: 0 auto;
+}
