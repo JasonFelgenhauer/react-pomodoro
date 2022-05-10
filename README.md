@@ -42,3 +42,14 @@ npm run build
 ## Push history
 
 1. Added basic project structure.
+2. Added timer design and logic.
+
+## TODO
+
+-   [ ] Add responsive
+-   [ ] Add sound alert
+-   [ ] Add color code
+
+## Screenshot
+
+![index](http://pics.jason-fel.be/uploads/1652171614image_2022-05-10_103332611.png)
