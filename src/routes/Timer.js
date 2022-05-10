@@ -1,9 +1,9 @@
-import Header from '../Components/Header';
+import Timer from '../Components/Timer';
 
 const Home = () => {
 	return (
 		<div>
-			<Header />
+			<Timer />
 		</div>
 	);
 };

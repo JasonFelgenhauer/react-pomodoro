@@ -55,18 +55,18 @@ const Timer = () => {
 	const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
 	return (
-		<header className='container header'>
-			<div className='header_content'>
+		<div className='container timer'>
+			<div className='timer_content'>
 				<p>
-					<span className='header_content_minuts'>{timerMinutes}</span> : <span className='header_content_seconds'>{timerSeconds}</span>
+					<span className='timer_content_minuts'>{timerMinutes}</span> : <span className='timer_content_seconds'>{timerSeconds}</span>
 				</p>
 			</div>
-			<div className='header_buttons'>
+			<div className='timer_buttons'>
 				<button id='more'>&#43;</button>
 				<button id='start'>Start</button>
 				<button id='less'>&#45;</button>
 			</div>
-		</header>
+		</div>
 	);
 };
 

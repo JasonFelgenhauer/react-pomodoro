@@ -1,0 +1,23 @@
+.header {
+	height: 80vh;
+	text-align: center;
+	&_content {
+		h1 {
+			font-size: 3em;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			margin-bottom: 50px;
+		}
+		a {
+			padding: 10px 40px;
+			font-weight: 700;
+			border-radius: 5px;
+			cursor: pointer;
+			border: 3px $color_4 solid;
+			transition: all 0.3s;
+			&:hover {
+				background: $color_4;
+			}
+		}
+	}
+}

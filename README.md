@@ -43,6 +43,7 @@ npm run build
 
 1. Added basic project structure.
 2. Added timer design and logic.
+3. Added a home page.
 
 ## TODO
 
