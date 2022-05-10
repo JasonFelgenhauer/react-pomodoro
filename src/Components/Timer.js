@@ -22,8 +22,18 @@ const Timer = () => {
 		document.getElementById('more').addEventListener('click', () => {
 			setMinutes(minutes + 1);
 		});
+		document.getElementById('more_more').addEventListener('click', () => {
+			setMinutes(minutes + 10);
+		});
 		document.getElementById('less').addEventListener('click', () => {
 			setMinutes(minutes - 1);
+		});
+		document.getElementById('less_less').addEventListener('click', () => {
+			if (minutes >= 10) {
+				setMinutes(minutes - 10);
+			} else {
+				setMinutes(0);
+			}
 		});
 		document.getElementById('restart').addEventListener('click', () => {
 			window.location.reload();
@@ -81,10 +91,12 @@ const Timer = () => {
 				</p>
 			</div>
 			<div className='timer_bottom'>
+				<button id='more_more'>&#43; &#43;</button>
 				<button id='more'>&#43;</button>
 				<button id='start'>Start</button>
 				<button id='restart'>Restart</button>
 				<button id='less'>&#45;</button>
+				<button id='less_less'>&#45; &#45;</button>
 			</div>
 		</div>
 	);
