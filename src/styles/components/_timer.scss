@@ -1,0 +1,32 @@
+.header {
+	height: 80vh;
+	flex-direction: column;
+	&_content {
+		width: 50%;
+		margin-bottom: 100px;
+		p {
+			width: 100%;
+			text-align: center;
+			font-size: 10em;
+		}
+	}
+	&_buttons {
+		button {
+			background: $color_3;
+			color: $color_2;
+			border: 3px $color_3 solid;
+			padding: 10px 40px;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			border-radius: 5px;
+			cursor: pointer;
+			margin: 0 10px;
+			font-weight: 700;
+			transition: all 0.3s;
+			&:hover {
+				background: none;
+			}
+		}
+	}
+}

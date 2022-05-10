@@ -1,10 +1,9 @@
-import React from 'react';
-import Test from '../Components/Home';
+import Timer from '../Components/Timer';
 
 const Home = () => {
 	return (
 		<div>
-			<Test />
+			<Timer />
 		</div>
 	);
 };
