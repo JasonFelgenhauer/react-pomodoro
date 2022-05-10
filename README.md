@@ -3,6 +3,7 @@
 # React Pomodoro Timer
 
 This project is a pomodoro timer made to confirm my Front-End skills.
+This timer offers every 25 minutes of work 5 minutes of break.
 Project : [here](http://react-pomodoro.jason-fel.be)
 
 ## Get the project
@@ -45,12 +46,13 @@ npm run build
 2. Added timer design and logic.
 3. Added a home page.
 4. Added responsive and a restart button.
+5. Added sound and color-coded alert for the last 5 seconds.
 
 ## TODO
 
 -   [x] Add responsive
--   [ ] Add sound alert
--   [ ] Add color code
+-   [x] Add sound alert
+-   [x] Add color code
 
 ## Screenshot
 

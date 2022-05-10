@@ -6,6 +6,8 @@ const Timer = () => {
 	const [seconds, setSeconds] = useState(0);
 	const [breake, setBreak] = useState(true);
 	const [play, setPlay] = useState(false);
+	const [sound, setSound] = useState(false);
+	const alert = new Audio('./assets/timer.mp3');
 
 	useEffect(() => {
 		document.getElementById('start').addEventListener('click', (e) => {
@@ -31,6 +33,16 @@ const Timer = () => {
 			let interval = setInterval(() => {
 				clearInterval(interval);
 
+				if (minutes === 0 && seconds <= 6 && seconds > 0) {
+					document.getElementById('time').style.color = '#FF647C';
+					if (sound) {
+						alert.play();
+						setSound(false);
+					}
+				} else {
+					document.getElementById('time').style.color = '#e5e7fa';
+					setSound(true);
+				}
 				if (seconds === 0) {
 					if (minutes !== 0) {
 						setSeconds(59);
@@ -64,7 +76,7 @@ const Timer = () => {
 				<NavLink to='/'>Back to home</NavLink>
 			</div>
 			<div className='timer_center'>
-				<p>
+				<p id='time'>
 					{timerMinutes} : {timerSeconds}
 				</p>
 			</div>
