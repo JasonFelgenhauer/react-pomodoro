@@ -3,7 +3,7 @@
 # React Pomodoro Timer
 
 This project is a pomodoro timer made to confirm my Front-End skills.
-Project : [here](http://calculator.jason-fel.be)
+Project : [here](http://react-pomodoro.jason-fel.be)
 
 ## Get the project
 
