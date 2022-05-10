@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Timer = () => {
 	const [minutes, setMinutes] = useState(25);
@@ -21,6 +22,9 @@ const Timer = () => {
 		});
 		document.getElementById('less').addEventListener('click', () => {
 			setMinutes(minutes - 1);
+		});
+		document.getElementById('restart').addEventListener('click', () => {
+			window.location.reload();
 		});
 
 		if (play) {
@@ -56,14 +60,18 @@ const Timer = () => {
 
 	return (
 		<div className='container timer'>
-			<div className='timer_content'>
+			<div className='timer_top'>
+				<NavLink to='/'>Back to home</NavLink>
+			</div>
+			<div className='timer_center'>
 				<p>
-					<span className='timer_content_minuts'>{timerMinutes}</span> : <span className='timer_content_seconds'>{timerSeconds}</span>
+					{timerMinutes} : {timerSeconds}
 				</p>
 			</div>
-			<div className='timer_buttons'>
+			<div className='timer_bottom'>
 				<button id='more'>&#43;</button>
 				<button id='start'>Start</button>
+				<button id='restart'>Restart</button>
 				<button id='less'>&#45;</button>
 			</div>
 		</div>

@@ -44,10 +44,11 @@ npm run build
 1. Added basic project structure.
 2. Added timer design and logic.
 3. Added a home page.
+4. Added responsive and a restart button.
 
 ## TODO
 
--   [ ] Add responsive
+-   [x] Add responsive
 -   [ ] Add sound alert
 -   [ ] Add color code
 

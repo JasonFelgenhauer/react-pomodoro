@@ -1,8 +1,20 @@
 .timer {
 	height: 80vh;
 	flex-direction: column;
-	&_content {
-		width: 50%;
+	justify-content: space-around;
+	&_top {
+		align-self: flex-start;
+		margin-left: 100px;
+		a {
+			border-bottom: 3px $color_1 solid;
+			padding-bottom: 5px;
+			transition: all 0.3s;
+			&:hover {
+				border-color: $color_2;
+			}
+		}
+	}
+	&_center {
 		margin-bottom: 100px;
 		p {
 			width: 100%;
@@ -10,7 +22,7 @@
 			font-size: 10em;
 		}
 	}
-	&_buttons {
+	&_bottom {
 		button {
 			background: $color_3;
 			color: $color_2;
@@ -26,6 +38,39 @@
 			transition: all 0.3s;
 			&:hover {
 				background: none;
+			}
+		}
+	}
+	@media (max-width: 700px) {
+		&_top {
+			margin-left: 50px;
+		}
+		&_center {
+			p {
+				font-size: 5em;
+			}
+		}
+		&_bottom {
+			button {
+				font-size: 0.8em;
+				padding: 10px 20px;
+			}
+		}
+	}
+	@media (max-width: 410px) {
+		&_top {
+			margin: 0 auto;
+		}
+		&_center {
+			p {
+				font-size: 3em;
+			}
+		}
+		&_bottom {
+			button {
+				font-size: 0.6em;
+				margin: 0 5px;
+				padding: 10px;
 			}
 		}
 	}
