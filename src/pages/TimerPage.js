@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Timer = () => {
+const TimerPage = () => {
 	const [minutes, setMinutes] = useState(25);
 	const [seconds, setSeconds] = useState(0);
 	const [breake, setBreak] = useState(true);
@@ -9,36 +9,27 @@ const Timer = () => {
 	const [sound, setSound] = useState(false);
 	const alert = new Audio('./assets/timer.mp3');
 
-	useEffect(() => {
-		document.getElementById('start').addEventListener('click', (e) => {
-			if (play) {
-				setPlay(false);
-				e.target.innerHTML = 'Start';
-			} else {
-				setPlay(true);
-				e.target.innerHTML = 'Stop';
-			}
-		});
-		document.getElementById('more').addEventListener('click', () => {
-			setMinutes(minutes + 1);
-		});
-		document.getElementById('more_more').addEventListener('click', () => {
-			setMinutes(minutes + 10);
-		});
-		document.getElementById('less').addEventListener('click', () => {
-			setMinutes(minutes - 1);
-		});
-		document.getElementById('less_less').addEventListener('click', () => {
-			if (minutes >= 10) {
-				setMinutes(minutes - 10);
-			} else {
-				setMinutes(0);
-			}
-		});
-		document.getElementById('restart').addEventListener('click', () => {
-			window.location.reload();
-		});
+	const start = (e) => {
+		if (play) {
+			setPlay(false);
+			e.target.innerHTML = 'Start';
+		} else {
+			setPlay(true);
+			e.target.innerHTML = 'Stop';
+		}
+	};
 
+	const addTime = (number) => setMinutes(minutes + number);
+	const removeTime = (number) => setMinutes(minutes - number);
+	const restart = () => window.location.reload();
+
+	useEffect(() => {
+		if (minutes <= 0) {
+			setMinutes(0);
+		}
+	}, [minutes]);
+
+	useEffect(() => {
 		if (play) {
 			let interval = setInterval(() => {
 				clearInterval(interval);
@@ -91,15 +82,15 @@ const Timer = () => {
 				</p>
 			</div>
 			<div className='timer_bottom'>
-				<button id='more_more'>&#43; &#43;</button>
-				<button id='more'>&#43;</button>
-				<button id='start'>Start</button>
-				<button id='restart'>Restart</button>
-				<button id='less'>&#45;</button>
-				<button id='less_less'>&#45; &#45;</button>
+				<button onClick={() => addTime(10)}>&#43; &#43;</button>
+				<button onClick={() => addTime(1)}>&#43;</button>
+				<button onClick={start}>Start</button>
+				<button onClick={restart}>Restart</button>
+				<button onClick={() => removeTime(1)}>&#45;</button>
+				<button onClick={() => removeTime(10)}>&#45; &#45;</button>
 			</div>
 		</div>
 	);
 };
 
-export default Timer;
+export default TimerPage;

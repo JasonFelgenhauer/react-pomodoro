@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-const Home = lazy(() => import('./routes/Home'));
-const Timer = lazy(() => import('./routes/Timer'));
+const Home = lazy(() => import('./pages/HomePage'));
+const Timer = lazy(() => import('./pages/TimerPage'));
 
 function App() {
 	return (
