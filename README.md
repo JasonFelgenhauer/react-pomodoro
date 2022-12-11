@@ -48,6 +48,7 @@ npm run build
 4. Added responsive and a restart button.
 5. Added sound and color-coded alert for the last 5 seconds.
 6. Added buttons (more/less).
+7. Small refacto
 
 ## TODO
 
