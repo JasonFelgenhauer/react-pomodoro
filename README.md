@@ -50,12 +50,6 @@ npm run build
 6. Added buttons (more/less).
 7. Small refacto
 
-## TODO
-
--   [x] Add responsive
--   [x] Add sound alert
--   [x] Add color code
-
 ## Screenshot
 
-![index](http://pics.jason-fel.be/uploads/1652171614image_2022-05-10_103332611.png)
+![index](https://media.discordapp.net/attachments/767431513016500235/1122252945283633322/image.png?width=720&height=377)
